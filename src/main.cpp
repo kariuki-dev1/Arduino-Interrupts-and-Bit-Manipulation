@@ -21,7 +21,7 @@ void setup() {
   pinMode(inturruptpin, INPUT_PULLUP);
 
   attachInterrupt(digitalPinToInterrupt(inturruptpin), buttonISR, FALLING);
-
+  detachInterrupt(digitalPinToInterrupt(inturruptpin));
   bitSet(ledstate, 1);
   bitSet(ledstate, 2);
   bitSet(ledstate, 3);
